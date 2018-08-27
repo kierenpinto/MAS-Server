@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+pylint = "*"
+
+[packages]
+paho-mqtt = "*"
+"boto3" = "*"
+awscli = "*"
+flask = "*"
+connexion = "*"
+
+[requires]
+python_version = "3.6"

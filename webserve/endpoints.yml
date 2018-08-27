@@ -1,0 +1,34 @@
+swagger: "2.0"
+info:
+  description: Emission Stats
+  version: "0.0.1"
+  title: MonashAirSense
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+
+basePath: "/api"
+
+# Paths supported by the server application
+paths:
+  /live:
+    get:
+      operationId: "data.live"
+      tags:
+        - "Live"
+      summary: "The people data structure supported by the server application"
+      description: "Read the list of people"
+      responses:
+        200:
+          description: "Successful live update"
+          schema:
+            type: "array"
+            items:
+              properties:
+                device:
+                  type: "string"
+                timestamp:
+                  type: "string"
+                level:
+                  type: "number"
