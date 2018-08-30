@@ -12,6 +12,7 @@ paho-mqtt = "*"
 awscli = "*"
 flask = "*"
 connexion = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.6"

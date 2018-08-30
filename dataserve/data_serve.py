@@ -12,9 +12,13 @@ def data_parsein(data):
     sensor_data = json.loads(data)
     datetime = sensor_data['time'] + sensor_data['date']
     print(datetime)
-    PM2_5 = sensor_data['s_d0']
-    print(PM2_5)
-    dynamodb.save(sensor_data['device_id'],sensor_data['timestamp'],datetime,PM2_5)
+    
+    if 's_d0' in sensor_data:
+        PM2_5 = sensor_data['s_d0']
+        print(PM2_5)
+        dynamodb.save(sensor_data['device_id'],sensor_data['timestamp'],datetime,PM2_5)
+    else:
+        print("Failed Data")
     return
 
 ##########################Define event callbacks

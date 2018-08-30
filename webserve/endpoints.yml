@@ -17,6 +17,39 @@ paths:
       operationId: "data.live"
       tags:
         - "Live"
+      consumes:
+      - application/x-www-form-urlencoded
+      summary: "The people data structure supported by the server application"
+      description: "Read the list of people"
+      responses:
+        200:
+          description: "Successful live update"
+          schema:
+            type: "array"
+            items:
+              properties:
+                device:
+                  type: "string"
+                timestamp:
+                  type: "string"
+                level:
+                  type: "number"
+  /query:
+    get:
+      operationId: "data.query"
+      parameters:
+        - name: start_ts
+          description: StartTime.
+          in: query
+          type: integer
+          required: true
+        - name: end_ts
+          description: Some message.
+          in: query
+          type: integer
+          required: true
+      tags:
+        - "Live"
       summary: "The people data structure supported by the server application"
       description: "Read the list of people"
       responses:
