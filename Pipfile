@@ -9,10 +9,12 @@ pylint = "*"
 [packages]
 paho-mqtt = "*"
 "boto3" = "*"
-awscli = "*"
 flask = "*"
-connexion = "*"
 gunicorn = "*"
+connexion = "*"
 
 [requires]
 python_version = "3.6"
+
+[pipenv]
+allow_prereleases = true

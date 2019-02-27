@@ -9,6 +9,7 @@ default_url = 'mqtt://bheazjan:Zj8TLcRab1Wt@m13.cloudmqtt.com:12504'
 topic_list = [('datastream/#',0),]
 ########################## Data Parsing and Processing
 def data_parsein(data):
+    ''' Parses MQTT Data from JSON string to Object'''
     sensor_data = json.loads(data)
     datetime = sensor_data['time'] + sensor_data['date']
     print(datetime)
