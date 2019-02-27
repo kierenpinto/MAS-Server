@@ -28,19 +28,22 @@ There are several different configuration options available. Multiple databases 
     * To install pyenv, run: 
         ```
         $ curl https://pyenv.run | bash 
-        ``` 
+        ```  
     * [Documentation for pyenv](https://github.com/pyenv/pyenv-installer).
-<br/>
+    
 2. Ensure pipenv is installed.
     * Use:
         ```
         pip install --user pipenv
         ```
     * This is important to isolate dependancies in your python application from any others installed on your system.
+    
     * [General Documentation for pipenv](https://pipenv.readthedocs.io/en/latest/#)
-        * [Installation](https://pipenv.readthedocs.io/en/latest/install/#installing-pipenv)
+    
+    * [Installation](https://pipenv.readthedocs.io/en/latest/install/#installing-pipenv)
 3. Clone the repository
+
 4. Once in the "./MAS-Server" directory, run `pipenv install` to set up the virtual environment. It installs all python dependancies for MAS-Server in an isolated container. Make sure to jump into the environment (initiate it) by running `pipenv shell`. 
-<br/>
+
 
 ~~Finally you can run `python main.py` to get started.~~ Read the wiki's [Post Installation](wiki/Post-Installation---Getting-up-and-running) steps.Now you're ready to rock and roll. 
