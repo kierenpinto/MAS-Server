@@ -1,4 +1,4 @@
-from serve import app
+from webserve.serve import app
 application = app
 if __name__ == "__main__":
     application.run()

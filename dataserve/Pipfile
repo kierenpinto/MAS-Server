@@ -9,12 +9,7 @@ pylint = "*"
 [packages]
 paho-mqtt = "*"
 "boto3" = "*"
-flask = "*"
-gunicorn = "*"
-connexion = "*"
+mysql-connector-python = "*"
 
 [requires]
 python_version = "3.6"
-
-[pipenv]
-allow_prereleases = true

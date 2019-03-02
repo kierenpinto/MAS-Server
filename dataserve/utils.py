@@ -1,5 +1,8 @@
+
+#Currently Not Used
 import time, datetime
 def date_range(mindate, maxdate):
+    '''Description '''
     maxdateobj = datetime.datetime(mindate['year'],mindate['month'],mindate['day'],hour=mindate['hour'],minute=mindate['min'],second=mindate['sec'],microsecond=0, tzinfo=None,fold=0)
     mintuple = maxdateobj.timetuple()
     min_epoc_sec = time.mktime(mintuple)
