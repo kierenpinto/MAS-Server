@@ -9,5 +9,5 @@ EXPOSE 8883
 EXPOSE 12504
 ENV NAME World 
 ENV AWS_DEFAULT_REGION us-west-2
-CMD ["python", "data_serve.py"]
+CMD ["python", "app.py"]
 #CMD ["python"]
