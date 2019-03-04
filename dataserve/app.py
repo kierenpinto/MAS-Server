@@ -1,5 +1,5 @@
 import paho.mqtt.client as mqtt
-import json, os, urllib.parse, dynamodb_store, configparser, mysql_store
+import json, os, urllib.parse, configparser, mysql_store
 # Parse Config File
 config = configparser.ConfigParser()
 config.read('app.conf')
@@ -17,6 +17,7 @@ def store_data(data):
         dbg_msg = "PM2.5: " + str(PM2_5)
         if config['MAIN'].getboolean('DYNAMODB_ENABLE'):
             try:
+                import dynamodb_store
                 dynamodb_store.save(meta['device_id'],meta['timestamp'],datetime,PM2_5)
             except Exception as e:
                 print('DYNAMODB ERROR')
