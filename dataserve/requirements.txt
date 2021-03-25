@@ -20,7 +20,7 @@ openapi-spec-validator==0.2.6
 paho-mqtt==1.4.0
 pathlib==1.0.1
 python-dateutil==2.8.0 ; python_version >= '2.7'
-pyyaml==5.1b3
+pyyaml==5.4
 requests==2.21.0
 s3transfer==0.2.0
 six==1.12.0
